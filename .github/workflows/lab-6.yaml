@@ -13,11 +13,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Optional: Install dependencies if needed
-      - name: Install dependencies (if applicable)
-        run: |
-          npm install  # If using npm, or replace with your install command
-
       # Optional: Build step (if applicable)
       - name: Build the website (if needed)
         run: |
