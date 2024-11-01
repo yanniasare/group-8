@@ -10,16 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Optional: Build step (if applicable)
-      - name: Build the website (if needed)
-        run: |
-          npm run build  # Use build command, e.g., `jekyll build`, `gatsby build`, etc.
-
+      # Deploy directly to GitHub Pages without building
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Adjust if your build output is in a specific folder
+          publish_dir: ./  # Adjust if your website output is in a specific folder
